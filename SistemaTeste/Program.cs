@@ -1,3 +1,10 @@
+using Pomelo.EntityFrameworkCore.MySql;
+using Microsoft.EntityFrameworkCore;
+using SistemaTeste.Data;
+using System.Data.Common;
+using SistemaTeste.Models;
+using SistemaTeste.Reposiorios;
+using SistemaTeste.Reposiorios.Interfaces;
 
 namespace SistemaTeste
 {
@@ -13,6 +20,12 @@ namespace SistemaTeste
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddEntityFrameworkMySql()
+                .AddDbContext<SistemaTarefasDBContex>(
+                    options => options.UseMySql(ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DataBase")))
+                );
+            builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 
             var app = builder.Build();
 

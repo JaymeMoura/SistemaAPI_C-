@@ -8,12 +8,12 @@ namespace SistemaTeste.Controllers
     [ApiController]
     public class UsuarioController : ControllerBase
     {
+        ///metodo para buscar todos os ususarios. 
+        
         [HttpGet]
         public ActionResult<List<UsuarioModel>> BuscarTodosUsuarios()
         {
             return Ok();
         }
-
-        ///testeeeeeee123
     }
 }
