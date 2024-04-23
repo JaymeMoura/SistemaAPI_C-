@@ -21,10 +21,8 @@ namespace SistemaTeste
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddEntityFrameworkMySql()
-                .AddDbContext<SistemaTarefasDBContex>(
-                    options => options.UseMySql(ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DataBase")))
-                );
+            builder.Services.AddDbContext<SistemaTarefasDBContex>();
+
             builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 
             var app = builder.Build();
