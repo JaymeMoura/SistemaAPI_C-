@@ -26,7 +26,7 @@ namespace SistemaTeste.Data
 
             if (typedatabase == "Mysql")
             {
-                optionsBuilder.UseSqlServer(connectionString);
+                optionsBuilder.UseMySQL(connectionString);
             }
 
         }
