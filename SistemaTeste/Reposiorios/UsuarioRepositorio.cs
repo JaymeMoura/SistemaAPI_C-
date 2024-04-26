@@ -30,7 +30,7 @@ namespace SistemaTeste.Reposiorios
         public async Task<UsuarioModel> Adcionar(UsuarioModel usuario)
         {
            await _dbContex.AddAsync(usuario);
-            _dbContex.SaveChanges();
+           await _dbContex.SaveChangesAsync();
 
             return usuario;
         }
