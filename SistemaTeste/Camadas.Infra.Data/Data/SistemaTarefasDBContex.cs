@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.Options;
-using SistemaTeste.Data.Map;
-using SistemaTeste.Models;
+using SistemaTeste.Camadas.Domain.Models;
+using SistemaTeste.Camadas.Infra.Data.Entities;
 
-namespace SistemaTeste.Data
+namespace SistemaTeste.Camadas.Infra.Data.Data
 {
     public class SistemaTarefasDBContex : DbContext
     {
@@ -20,7 +20,7 @@ namespace SistemaTeste.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            
+
             var typedatabase = _configuration["typedatabase"];
             var connectionString = _configuration.GetConnectionString(typedatabase);
 
