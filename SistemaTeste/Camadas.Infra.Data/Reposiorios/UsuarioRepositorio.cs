@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SistemaTeste.Data;
-using SistemaTeste.Models;
-using SistemaTeste.Reposiorios.Interfaces;
+using SistemaTeste.Camadas.Application.Interfaces;
+using SistemaTeste.Camadas.Domain.Models;
+using SistemaTeste.Camadas.Infra.Data.Data;
 
-namespace SistemaTeste.Reposiorios
+namespace SistemaTeste.Camadas.Infra.Data.Reposiorios
 {
     public class UsuarioRepositorio : IUsuarioRepositorio
     {
@@ -29,8 +29,8 @@ namespace SistemaTeste.Reposiorios
 
         public async Task<UsuarioModel> Adcionar(UsuarioModel usuario)
         {
-           await _dbContex.AddAsync(usuario);
-           await _dbContex.SaveChangesAsync();
+            await _dbContex.AddAsync(usuario);
+            await _dbContex.SaveChangesAsync();
 
             return usuario;
         }
@@ -68,8 +68,8 @@ namespace SistemaTeste.Reposiorios
             return true;
         }
 
-        
 
-        
+
+
     }
 }

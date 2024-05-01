@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SistemaTeste.Models;
-using SistemaTeste.Reposiorios.Interfaces;
+using SistemaTeste.Camadas.Application.Interfaces;
+using SistemaTeste.Camadas.Domain.Models;
 using System.Drawing.Text;
 using System.Reflection.Metadata.Ecma335;
 
-namespace SistemaTeste.Controllers
+namespace SistemaTeste.Camadas.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -56,6 +56,6 @@ namespace SistemaTeste.Controllers
             bool apagado = await _usuarioRepositorio.Apagar(id);
             return Ok(apagado);
         }
-        
+
     }
 }

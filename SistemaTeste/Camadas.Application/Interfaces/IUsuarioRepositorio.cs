@@ -1,6 +1,6 @@
-﻿using SistemaTeste.Models;
+﻿using SistemaTeste.Camadas.Domain.Models;
 
-namespace SistemaTeste.Reposiorios.Interfaces
+namespace SistemaTeste.Camadas.Application.Interfaces
 {
     public interface IUsuarioRepositorio
     {

@@ -1,12 +1,8 @@
-using Pomelo.EntityFrameworkCore.MySql;
-using Microsoft.EntityFrameworkCore;
-using SistemaTeste.Data;
-using System.Data.Common;
-using SistemaTeste.Models;
-using SistemaTeste.Reposiorios;
-using SistemaTeste.Reposiorios.Interfaces;
+using SistemaTeste.Camadas.Application.Interfaces;
+using SistemaTeste.Camadas.Infra.Data.Data;
+using SistemaTeste.Camadas.Infra.Data.Reposiorios;
 
-namespace SistemaTeste
+namespace SistemaTeste.Camadas.API
 {
     public class Program
     {

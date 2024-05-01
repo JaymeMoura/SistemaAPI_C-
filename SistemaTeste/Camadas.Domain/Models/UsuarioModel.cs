@@ -1,4 +1,4 @@
-﻿namespace SistemaTeste.Models
+﻿namespace SistemaTeste.Camadas.Domain.Models
 {
     public class UsuarioModel
     {
