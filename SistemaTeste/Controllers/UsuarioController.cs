@@ -18,7 +18,7 @@ namespace SistemaTeste.Controllers
             _usuarioRepositorio = usuarioRepositorio;
         }
 
-        ///metodo para buscar todos os ususarios. 
+        ///metodos: 
 
         [HttpGet]
         public async Task<ActionResult<List<UsuarioModel>>> BuscarTodosUsuarios()
