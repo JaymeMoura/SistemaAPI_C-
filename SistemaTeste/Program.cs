@@ -1,6 +1,6 @@
 using SistemaTeste.Camadas.Application.Interfaces;
 using SistemaTeste.Camadas.Infra.Data.Data;
-using SistemaTeste.Camadas.Infra.Data.Reposiorios;
+
 
 namespace SistemaTeste.Camadas.API
 {
@@ -11,7 +11,6 @@ namespace SistemaTeste.Camadas.API
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            // testee
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

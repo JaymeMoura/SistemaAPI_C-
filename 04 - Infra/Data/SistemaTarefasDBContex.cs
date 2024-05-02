@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
-using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Configuration;
 using SistemaTeste.Camadas.Domain.Models;
 using SistemaTeste.Camadas.Infra.Data.Entities;
+
 
 namespace SistemaTeste.Camadas.Infra.Data.Data
 {
